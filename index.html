@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kollywood Insider | 120 Arrested in Tamil Nadu for "Good Bad Ugly" Piracy</title>
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-color: #d9230f;
+            --secondary-color: #333;
+            --light-color: #f4f4f4;
+            --dark-color: #222;
+            --text-color: #444;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        img {
+            width: 100%;
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--dark-color);
+            color: #fff;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #fff;
+        }
+        
+        .logo span {
+            color: var(--primary-color);
+        }
+        
+        /* Navigation */
+        nav ul {
+            display: flex;
+        }
+        
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+        
+        nav ul li a {
+            color: #fff;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 400px;
+            background: url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            position: relative;
+            display: flex;
+            align-items: center;
+            color: #fff;
+            margin-bottom: 2rem;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            width: 60%;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: #fff;
+            padding: 0.6rem 1.3rem;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            border-radius: 5px;
+            transition: opacity 0.3s;
+        }
+        
+        .btn:hover {
+            opacity: 0.9;
+        }
+        
+        /* Main Content */
+        .main-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .article {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .article h2 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            line-height: 1.2;
+        }
+        
+        .article .meta {
+            display: flex;
+            margin-bottom: 1.5rem;
+            color: #777;
+            font-size: 0.9rem;
+        }
+        
+        .article .meta span {
+            margin-right: 1.5rem;
+        }
+        
+        .article img {
+            margin-bottom: 1.5rem;
+            border-radius: 5px;
+        }
+        
+        .article p {
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Sidebar */
+        .sidebar {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .sidebar h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--light-color);
+        }
+        
+        .sidebar-item {
+            margin-bottom: 2rem;
+        }
+        
+        .popular-posts .post {
+            display: flex;
+            margin-bottom: 1rem;
+        }
+        
+        .popular-posts .post img {
+            width: 80px;
+            height: 60px;
+            object-fit: cover;
+            margin-right: 1rem;
+            border-radius: 3px;
+        }
+        
+        .popular-posts .post h4 {
+            font-size: 0.9rem;
+            line-height: 1.3;
+        }
+        
+        .categories ul li {
+            padding: 0.5rem 0;
+            border-bottom: 1px dotted #ddd;
+        }
+        
+        .categories ul li a {
+            color: var(--text-color);
+            transition: color 0.3s;
+        }
+        
+        .categories ul li a:hover {
+            color: var(--primary-color);
+        }
+        
+        /* Newsletter */
+        .newsletter form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .newsletter input {
+            padding: 0.7rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark-color);
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 300px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        .footer-section p {
+            margin-bottom: 1rem;
+        }
+        
+        .social-icons a {
+            color: #fff;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .copyright {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #444;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 1rem;
+            }
+            
+            .hero-content {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">Kollywood<span>Insider</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Reviews</a></li>
+                    <li><a href="#">Interviews</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Massive Anti-Piracy Operation in Tamil Nadu</h1>
+                <p>Over 120 individuals arrested for downloading and sharing pirated copy of Ajith's "Good Bad Ugly"</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container main-content">
+        <main>
+            <article class="article">
+                <h2>120 Arrested Across Tamil Nadu for Downloading Pirated Version of "Good Bad Ugly"</h2>
+                <div class="meta">
+                    <span>By Arun Kumar</span>
+                    <span>June 15, 2023</span>
+                    <span>5 min read</span>
+                </div>
+                <img src="https://images.unsplash.com/photo-1608889825103-eb5a6f5ad5d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Police arresting people">
+                <p>In a major crackdown on film piracy, Tamil Nadu Cyber Crime Police have arrested 120 individuals across the state for downloading, sharing, or distributing the pirated version of superstar Ajith Kumar's latest blockbuster "Good Bad Ugly". The arrests were made in coordinated raids conducted simultaneously in Chennai, Coimbatore, Madurai, Trichy, and Salem.</p>
+                
+                <p>The movie, which released worldwide today morning, had its HD print leaked online within hours of its theatrical release. The Anti-Piracy Cell of Kollywood immediately alerted authorities, leading to swift action by the Cyber Crime division.</p>
+                
+                <img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Police investigation">
+                <p>"We have identified and arrested the main culprits who first uploaded the movie to torrent sites and Telegram channels," said Chennai Cyber Crime SP Rajeshwari Natarajan. "Additionally, we've tracked down and arrested users who downloaded the pirated copy through their IP addresses. This sends a strong message that piracy will not be tolerated."</p>
+                
+                <p>According to police sources, the mastermind behind the leak was traced to a digital studio in Vadapalani, Chennai, where an employee allegedly smuggled out a digital copy during the final quality check. The individual has been detained along with several associates who helped distribute the copy online.</p>
+                
+                <p>In Madurai, police arrested 28 college students who had formed a WhatsApp group to share the pirated link. "These students knew it was illegal but thought they wouldn't get caught," said Madurai DSP Vijayakumar. "They're now facing serious charges under the Copyright Act and IT Act."</p>
+                
+                <p>The Tamil Nadu Film Producers Council has welcomed the crackdown. President Vishal Ramaswamy stated, "Piracy is killing our industry. Each illegal download means lost revenue for hundreds of workers. We applaud the police for their swift action."</p>
+                
+                <p>Legal experts warn that those arrested could face up to 3 years imprisonment and fines up to ₹2 lakh under Section 63 of the Copyright Act. First-time offenders may get away with warnings, but repeat offenders will face strict punishment.</p>
+                
+                <p>The police have urged the public to report any pirated links immediately and warned that they are actively monitoring torrent sites and file-sharing platforms. "Enjoy movies in theaters or through legal platforms. Piracy is not a victimless crime," emphasized SP Natarajan.</p>
+                
+                <p>Meanwhile, "Good Bad Ugly" has opened to record-breaking collections in theaters despite the piracy threat. Fans have taken to social media with #SupportCinema hashtag, encouraging others to watch the film legally.</p>
+            </article>
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-item about">
+                <h3>About Us</h3>
+                <img src="https://images.unsplash.com/photo-1461988320302-91bde64fc8e4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="About Kollywood Insider">
+                <p>Kollywood Insider brings you the latest news, updates, and behind-the-scenes stories from Tamil cinema. Our team of industry insiders provides authentic reporting you can trust.</p>
+            </div>
+            
+            <div class="sidebar-item popular-posts">
+                <h3>Popular Posts</h3>
+                <div class="post">
+                    <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Vijay movie">
+                    <h4><a href="#">Vijay's 'Leo' Breaks Box Office Records in Opening Weekend</a></h4>
+                </div>
+                <div class="post">
+                    <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Nayanthara">
+                    <h4><a href="#">Nayanthara Announces New Production Venture</a></h4>
+                </div>
+                <div class="post">
+                    <img src="https://images.unsplash.com/photo-1542204165-65bf26472b9b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Music director">
+                    <h4><a href="#">AR Rahman to Compose for Mani Ratnam's Next</a></h4>
+                </div>
+            </div>
+            
+            <div class="sidebar-item categories">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="#">Latest News</a></li>
+                    <li><a href="#">Movie Reviews</a></li>
+                    <li><a href="#">Box Office</a></li>
+                    <li><a href="#">Interviews</a></li>
+                    <li><a href="#">Behind the Scenes</a></li>
+                    <li><a href="#">OTT Releases</a></li>
+                </ul>
+            </div>
+            
+            <div class="sidebar-item newsletter">
+                <h3>Newsletter</h3>
+                <p>Subscribe to get daily updates on Kollywood</p>
+                <form>
+                    <input type="text" placeholder="Your Name">
+                    <input type="email" placeholder="Your Email">
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Kollywood Insider</h3>
+                    <p>Your premier source for authentic Tamil cinema news, reviews, and exclusive content since 2010.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Advertise With Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>123 Cinema Street, T Nagar</p>
+                    <p>Chennai, Tamil Nadu 600017</p>
+                    <p>Phone: +91 9876543210</p>
+                    <p>Email: info@kollywoodinsider.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Kollywood Insider. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Font Awesome for icons (would normally be a CDN link) -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
